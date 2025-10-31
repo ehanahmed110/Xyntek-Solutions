@@ -1,0 +1,130 @@
+    .play{
+      animation-play-state: running;
+    }
+    
+    .paused {
+      animation-play-state: paused;
+    }
+    
+    @keyframes text-zoom {
+      0%{
+        transform: scale(0.1);
+      }
+      100%{
+        transform: scale(1);
+      }
+    }
+    .scale {
+      animation: text-zoom 1.5s linear 1 forwards;
+    }
+
+    
+    @keyframes reveal {
+      0%{
+        transform: scale(0.1);
+      }
+      50%{
+        transform: scale(1.1);
+      }
+      100%{
+        transform: scale(1.0);
+      }
+    }
+   .reveal{
+      animation: reveal 2s ease-in 0s 1;
+    }
+
+    @keyframes faqs {
+      0%{
+        transform: scale(0.2);
+      }
+      50% {
+        transform: translateX(100px);
+      }
+      100% {
+        transform: translateX(0px) scale(1.0) ;
+      }
+    }
+    .faq-animate {
+      animation: faqs 2s linear 0s 1 forwards;
+    }
+    
+    @keyframes slide-right {
+      from {
+        margin-left: -100%;
+      }
+      to {
+        margin-left: 0;
+      }
+    }
+    .slide-right {
+      animation: 1.7s slide-right ease-in-out forwards;
+    }
+    
+    .slide-right-duration {
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+    }
+    
+    @keyframes slide-left {
+      from {
+        margin-right: -100%;
+      }
+      to {
+        margin-right: 0%;
+      }
+    }
+    .slide-left {
+      animation: 1.7s slide-left ease-in-out forwards;
+    }
+    
+
+    @keyframes MoveUpDown {
+            0%, 100% {
+                bottom: 0;
+            }
+            50% {
+                bottom: 70px;
+            }
+        }
+    .service-animate {
+        animation: MoveUpDown 4s linear infinite;
+        position: relative;
+        left: 0;
+        bottom: 0;
+    }    
+    
+    @keyframes MoveUpDownb {
+        0%, 100% {
+            top: 0;
+        }
+        50% {
+            top: 70px;
+        }
+    }
+    .service-animate2 {
+        animation: MoveUpDownb 4s linear infinite;
+        position: relative;
+        left: 0;
+        bottom: 0;
+    }
+    
+    @media (max-width: 770px) {
+        @keyframes MoveUpDown {
+            0%, 100% {
+                bottom: 0;
+            }
+            50% {
+                bottom: 30px;
+            }
+        }
+        
+        @keyframes MoveUpDownb {
+        0%, 100% {
+            top: 0;
+        }
+        50% {
+            top: 40px;
+        }
+    }
+    }

@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <head>
+    <title>Xyntek</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/bootstrap/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/custom/custom.css" />
+    <link rel="stylesheet" type="text/css" href="assets/custom/hover.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/fontawesome/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/fontawesome/css/fontawesome.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/custom/animation.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/custom/body_animation.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="../cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="../cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="assets/img/logo_tab.png" type="image/png" />
+    <!-- Toaster -->
+    <link rel="stylesheet" href="assets/plugins/toastr/toastr.min.css" />
+    <style>
+      * {
+        scroll-behavior: smooth;
+      }
+      .navbar-toggler:focus {
+        box-shadow: 0 0 0 0.05rem !important;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow">
+      <div class="container-fluid">
+        <a class="navbar-brand p-0" href="index.html">
+          <img class="nav-img" alt="no image" src="assets/img/Company_Logo.jpg"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars-staggered" style="color: #cccccc"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about-us.html">About Us</a>
+            </li>
+            <!-- <li class="nav-item">
+                    <a class="nav-link " href="portfolio.html">Portfolio</a>
+                </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="faqs.html">FAQ's</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact-us.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- <-------------Navbar End----------->
+
+    <!-- -------------------detail---------------- -->
+    <div
+      class="d-flex align-items-center justify-content-center my-bg text-center"
+      style="height: 400px"
+    >
+      <div class="text-white my-font innovating scale">
+        Innovating Your Business
+      </div>
+      <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <!-- -------------------detail End---------------- -->
+
+    <!-- -----------------Counter------------------- -->
+    <div class="container-fluid mb-5 coun">
+      <div class="row uper-box slide-right">
+        <div
+          class="col-12 col-sm-6 col-md-3 col-lg-3 d-flex justify-content-center mb-4"
+        >
+          <div class="card counter-card h-100">
+            <img
+              alt="no image"
+              src="assets/img/working_from.png"
+              class="card-img-top counter-img"
+            />
+            <div class="card-body pt-0">
+              <h2
+                class="timer count-title count-number"
+                data-to="2017"
+                data-speed="1000"
+              ></h2>
+              <p class="count-text text-white">Working From</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-md-3 col-lg-3 d-flex justify-content-center mb-4"
+        >
+          <div class="card counter-card h-100">
+            <img
+              alt="no image"
+              src="assets/img/complete.png"
+              class="card-img-top counter-img"
+              style="padding: 0.7rem"
+            />
+            <div class="card-body pt-0">
+              <div class="d-flex justify-content-center">
+                <h2
+                  class="timer count-title count-number"
+                  data-to="20"
+                  data-speed="1000"
+                ></h2>
+                <h2 class="count-title count-number">+</h2>
+              </div>
+              <p class="count-text text-white">Projects Completed</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-md-3 col-lg-3 d-flex justify-content-center mb-4"
+        >
+          <div class="card counter-card h-100">
+            <img
+              alt="no image"
+              src="assets/img/hours.png"
+              class="card-img-top counter-img"
+              style="padding: 0.8rem"
+            />
+            <div class="card-body pt-0">
+              <h2
+                class="timer count-title count-number"
+                data-to="40"
+                data-speed="1000"
+              ></h2>
+              <p class="count-text text-white">Weekly Working Hours</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-md-3 col-lg-3 d-flex justify-content-center mb-4"
+        >
+          <div class="card counter-card h-100">
+            <img
+              alt="no image"
+              src="assets/img/clients.png"
+              class="card-img-top counter-img"
+              style="padding: 0.8rem"
+            />
+            <div class="card-body pt-0">
+              <div class="d-flex justify-content-center">
+                <h2
+                  class="timer count-title count-number"
+                  data-to="100"
+                  data-speed="1000"
+                ></h2>
+                <h2 class="count-title count-number">+</h2>
+              </div>
+              <p class="count-text text-white">Clients</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -----------------Counter End------------------- -->
+
+    <!-- ------------------Goal-------------------- -->
+    <div class="container-fluid mb-5" style="margin-top: 5rem">
+      <div class="row">
+        <div
+          class="col-12 col-sm-12 col-md-12 col-lg-12 px-0 text-center slide-right slide-right-duration anim paused"
+        >
+          <h1 class="key scale anim paused text-black">Our Key Features</h1>
+        </div>
+      </div>
+
+      <div class="row mt-6 mb-6 px-4">
+        <div
+          class="col-12 col-sm-12 col-md-12 col-lg-6 d-flex align-items-center slide-right anim paused"
+        >
+          <div class="key-feature-align-left ml-lg-7">
+            <h1 class="key-heading">Quality Products</h1>
+            <p class="key-text">
+              QP is the client demands what he wants to do for the projects. Our
+              purpose is to accomplish the client demands with quality.
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center">
+          <img
+            alt="no image"
+            src="assets/img/key1.jpg"
+            class="key-img scale anim paused"
+          />
+        </div>
+      </div>
+
+      <div class="row mt-6 mb-6 py-5 px-4" style="background-color: #f0f0f0">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 pl-key text-center">
+          <img
+            alt="no image"
+            src="assets/img/key2.jpg"
+            class="key-img1 scale anim paused"
+          />
+        </div>
+        <div
+          class="col-12 col-sm-12 col-md-12 col-lg-6 d-flex align-items-center slide-left anim paused"
+        >
+          <div class="key-feature-align-left mr-7">
+            <h1 class="key-heading">Timely Work</h1>
+            <p class="key-text">
+              Our team task is to complete all tasks and projects on the project
+              demanding time.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-6 mb-6 px-4">
+        <div
+          class="col-12 col-sm-12 col-md-12 col-lg-6 d-flex align-items-center slide-right anim paused"
+        >
+          <div class="key-feature-align-left ml-lg-7">
+            <h1 class="key-heading">Reliability</h1>
+            <p class="key-text">
+              Our team fulfills tasks about the requirements on the given
+              environment with designing and coding without any error.
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center">
+          <img
+            alt="no image"
+            src="assets/img/key3.jpg"
+            class="key-img scale anim paused"
+          />
+        </div>
+      </div>
+      <div class="row mt-6 mb-6 py-5 px-4" style="background-color: #f0f0f0">
+        <div
+          class="col-12 col-sm-12 col-md-12 col-lg-6 pl-key text-center slide-left anim pausedt"
+        >
+          <img
+            alt="no image"
+            src="assets/img/key4.jpg"
+            class="key-img1 scale anim paused"
+          />
+        </div>
+        <div
+          class="col-12 col-sm-12 col-md-12 col-lg-6 d-flex align-items-center slide-left anim paused"
+        >
+          <div class="key-feature-align-left">
+            <h1 class="key-heading">Maintainable</h1>
+            <p class="key-text">
+              The Team will maintain data, projects and system errors restore or
+              repair to a specified condition within a specified time
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ------------------Goal-------------------- -->
+
+    <!-- -----------------Services------------------ -->
+    <!-- <div class="container-fluid mb-5" style="margin-top: 8rem">
+      <div class="row">
+        <div
+          class="col-12 col-sm-12 col-md-12 col-lg-12 px-0 py-3 text-center slide-right slide-right-duration anim paused"
+          style="background-color: #0ba5b7"
+        >
+          <h1 class="key-service scale anim paused">Services We Provide</h1>
+        </div>
+      </div>
+      <div class="row mtkey-6 justify-content-center">
+        <div
+          class="col-12 col-sm-8 col-md-6 col-lg-4 mt-5 mb-5 service-animate anim paused"
+        >
+          <div class="card card-service mx-auto">
+            <img
+              alt="no image"
+              src="assets/img/services/service1.png"
+              class="card-img-top mx-auto service-img1"
+            />
+            <div class="card-body text-center">
+              <h1 class="service-font1">Web App</h1>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-8 col-md-6 col-lg-4 mt-5 mb-5 service-animate2 anim paused"
+        >
+          <div class="card card-service mx-auto service-top">
+            <img
+              alt="no image"
+              src="assets/img/services/digital.png"
+              class="card-img-top mx-auto service-img-d"
+            />
+            <div class="card-body text-center">
+              <h1 class="service-font-d">Digital Marketing</h1>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-8 col-md-6 col-lg-4 mt-5 mb-5 service-animate anim paused"
+        >
+          <div class="card card-service mx-auto">
+            <img
+              alt="no image"
+              src="assets/img/services/service3.png"
+              class="card-img-top mx-auto service-img3"
+            />
+            <div class="card-body text-center">
+              <h1 class="service-font">Mobile App</h1>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-8 col-md-6 col-lg-4 mt-5 mb-5 service-animate anim paused"
+        >
+          <div class="card card-service mx-auto">
+            <img
+              alt="no image"
+              src="assets/img/services/service4.png"
+              class="card-img-top mx-auto service-img4"
+            />
+            <div class="card-body text-center">
+              <h1 class="service-font2">Graphic Design</h1>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-8 col-md-6 col-lg-4 mt-5 mb-5 service-animate2 anim paused"
+        >
+          <div class="card card-service mx-auto service-top">
+            <img
+              alt="no image"
+              src="assets/img/services/service5.png"
+              class="card-img-top mx-auto service-img2"
+            />
+            <div class="card-body text-center">
+              <h1 class="service-font2">Microsoft Office</h1>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-8 col-md-6 col-lg-4 mt-5 mb-5 service-animate anim paused"
+        >
+          <div class="card card-service mx-auto">
+            <img
+              alt="no image"
+              src="assets/img/services/service6.png"
+              class="card-img-top mx-auto service-img6"
+            />
+            <div class="card-body text-center">
+              <h1 class="service-font3">SEO</h1>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 mt-5 mb-5">
+                <div class="card card-service mx-auto">
+                    <img src="assets/img/services/Graphic_Design.jpg" class="card-img-top mx-auto service-img4">
+                    <div class="card-body text-center">
+                        <h1 class="service-font2">Graphic Design</h1>
+                        <p class="card-text"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 mt-5 mb-5">
+                <div class="card card-service mx-auto service-top">
+                    <img src="assets/img/service5.png" class="card-img-top mx-auto service-img2">
+                    <div class="card-body text-center">
+                        <h1 class="service-font2">Microsoft Office</h1>
+                        <p class="card-text"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 mt-5 mb-5">
+                <div class="card card-service mx-auto">
+                    <img src="assets/img/service6.png" class="card-img-top mx-auto service-img6">
+                    <div class="card-body text-center">
+                        <h1 class="service-font3">SEO</h1>
+                        <p class="card-text"></p>
+                    </div>
+                </div>
+            </div>
+      </div>
+    </div> -->
+    <!-- -----------------Services End------------------ -->
+    <!-- -----------------Technologies------------------- -->
+
+    <div class="container-fluid mb-5" style="margin-top: 4rem">
+      <div class="row">
+        <div
+          class="col-12 col-sm-12 col-md-12 col-lg-12 px-0 text-center mb-5 slide-right slide-right-duration anim paused"
+        >
+          <h1
+            class="key scale anim paused text-black"
+            style="font-weight: 900px"
+          >
+            Technologies We are Working On
+          </h1>
+        </div>
+        <div class="owl-carousel tech-theme">
+          <div class="item">
+            <img alt="no image" src="assets/img/technologies/html.png" />
+          </div>
+          <div class="item">
+            <img alt="no image" src="assets/img/technologies/css.png" />
+          </div>
+          <div class="item">
+            <img alt="no image" src="assets/img/technologies/bootstrap.png" />
+          </div>
+          <div class="item">
+            <img alt="no image" src="assets/img/technologies/javascript.png" />
+          </div>
+          <div class="item">
+            <img alt="no image" src="assets/img/technologies/jquery.png" />
+          </div>
+          <div class="item">
+            <img alt="no image" src="assets/img/technologies/react.png" />
+          </div>
+          <div class="item">
+            <img alt="no image" src="assets/img/technologies/android.png" />
+          </div>
+          <div class="item">
+            <img alt="no image" src="assets/img/technologies/vuejs.png" />
+          </div>
+          <div class="item">
+            <img alt="no image" src="assets/img/technologies/flutter.png" />>
+          </div>
+          <div class="item">
+            <img alt="no image" src="assets/img/technologies/mysql.png" />
+          </div>
+          <div class="item">
+            <img alt="no image" src="assets/img/technologies/laravel.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -----------------Technologies End------------------- -->
+    <!-- -------------------Working Process------------------- -->
+
+    <div
+      class="container-fluid process mb-5 slide-right slide-right-duration anim paused"
+    >
+      <div class="row">
+        <div
+          class="col-12 col-sm-12 col-md-12 col-lg-12 pt-5 text-center scale anim paused"
+        >
+          <h1 class="process-heading">Our Working Process</h1>
+        </div>
+      </div>
+      <div class="row mt-3 slide-right anim paused">
+        <div
+          class="col-12 col-sm-12 col-md-6 col-lg-3 text-center mb-5 mt-5 position-relative"
+        >
+          <img
+            alt="no image"
+            src="assets/img/process1.png"
+            class="process-img mb-3"
+          />
+          <h3 class="icon-text">Planning</h3>
+          <span class="number-process">1</span>
+          <img alt="no image" src="assets/img/arrow.png" class="arrow_next" />
+        </div>
+        <div
+          class="col-12 col-sm-12 col-md-6 col-lg-3 text-center mb-5 mt-5 position-relative"
+        >
+          <img
+            alt="no image"
+            src="assets/img/process2.png"
+            class="process-img mb-3"
+          />
+          <h3 class="icon-text">Research</h3>
+          <span class="number-process1">2</span>
+          <img alt="no image" src="assets/img/arrow.png" class="arrow_next" />
+        </div>
+        <div
+          class="col-12 col-sm-12 col-md-6 col-lg-3 text-center mb-5 mt-5 position-relative"
+        >
+          <img
+            alt="no image"
+            src="assets/img/process3.png"
+            class="process-img mb-3"
+          />
+          <h3 class="icon-text">Development</h3>
+          <span class="number-process2">3</span>
+          <img alt="no image" src="assets/img/arrow.png" class="arrow_next" />
+        </div>
+        <div
+          class="col-12 col-sm-12 col-md-6 col-lg-3 text-center mb-5 mt-5 position-relative"
+        >
+          <img
+            alt="no image"
+            src="assets/img/process4.png"
+            class="process-img mb-3"
+          />
+          <h3 class="icon-text">Result</h3>
+          <span class="number-process3">4</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- -------------------Working Process End------------------- -->
+
+    <!-- ---------------------Clients---------------------- -->
+
+    <div class="container-fluid" style="margin-top: 4rem; padding: 0">
+      <div class="row">
+        <div
+          class="col-12 col-sm-12 col-md-12 col-lg-12 px-0 text-center slide-right slide-right-duration anim paused"
+        >
+          <h1 class="key scale anim paused text-black">Our Clients</h1>
+        </div>
+        <div class="owl-carousel client-theme">
+          <div class="item">
+            <img alt="no image" src="assets/img/clients/client.jpg" />
+          </div>
+          <div class="item">
+            <img alt="no image" src="assets/img/clients/clien2.jpg" />
+          </div>
+          <div class="item">
+            <img alt="no image" src="assets/img/clients/client3.jpg" />
+          </div>
+          <div class="item">
+            <img alt="no image" src="assets/img/clients/client4.jpg" />
+          </div>
+          <div class="item">
+            <img alt="no image" src="assets/img/clients/clien5.jpg" />
+          </div>
+          <div class="item">
+            <img alt="no image" src="assets/img/clients/client6.jpg" />
+          </div>
+          <div class="item">
+            <img alt="no image" src="assets/img/clients/client7.jpg" />
+          </div>
+          <div class="item">
+            <img alt="no image" src="assets/img/clients/c8.jpg" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- -----------------------Clients End------------------------- -->
+
+    <!-- ------------------------Featured Product------------------------ -->
+
+    <!-- --------------------------Featured Product---------------------- -->
+
+    <!-- Footer -->
+    <footer class="footer pt-2">
+      <div class="container-fluid">
+        <div class="row p-3 pt-4">
+          <div class="col-12 col-sm-6 col-md-3 hr text-center">
+            <img
+              alt="no image"
+              src="assets/img/Company_Logo.jpg"
+              class="footer-logo"
+            />
+          </div>
+          <div class="col-12 col-sm-6 col-md-3 hr">
+            <h6 class="follow mb-3">Useful Links</h6>
+            <p>
+              <a href="index.html" class="text-reset">Home</a>
+            </p>
+            <p>
+              <a href="about-us.html" class="text-reset">About Us</a>
+            </p>
+            <p>
+              <a href="faqs.html" class="text-reset">FAQ's</a>
+            </p>
+            <p>
+              <a href="contact-us.html" class="text-reset">Contact Us</a>
+            </p>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3 hr">
+            <h6 class="follow mb-3">Our Services</h6>
+            <p>
+              <a href="services.html#graphic_design" class="text-reset"
+                >Graphic Design Services</a
+              >
+            </p>
+            <p>
+              <a href="services.html#mobile_app_development" class="text-reset"
+                >Mobile App Development</a
+              >
+            </p>
+            <p>
+              <a href="services.html#web_development" class="text-reset"
+                >Web Development Services</a
+              >
+            </p>
+            <p>
+              <a
+                href="services.html#search_engine_optimization"
+                class="text-reset"
+                >Search Engine Optimization (SEO)</a
+              >
+            </p>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3">
+            <h6 class="follow">Follow Us</h6>
+            <ul>
+              <li>
+                <a href="#" class="social text-reset">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social text-reset">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social text-reset">
+                  <i class="fab fa-google"></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/xyntek.xyz?igsh=MXNobXJqczhqNXZkZA%3D%3D&utm_source=qr"
+                  class="social text-reset"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social text-reset">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <div class="row pb-2">
+          <div class="col-12 col-sm-12 col-md-12">
+            <h6 class="pt-2 text-muted copy-right text-center">
+              Xyntek © 2023 — Building the Future of Technology
+            </h6>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Footer -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+
+    <script
+      type="text/javascript"
+      src="assets/js/slick-carousel.min.js"
+    ></script>
+    <script src="assets/custom/custom.js"></script>
+    <!-- Toaster -->
+    <script src="assets/plugins/toastr/toastr.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".tech").slick({
+          slidesToShow: 6,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 1000,
+          adaptiveHeight: true,
+          arrows: false,
+          dots: false,
+          centerMode: true,
+          centerPadding: true,
+          focusOnSelect: true,
+          pauseOnHover: true,
+          responsive: [
+            {
+              breakpoint: 1400,
+              settings: {
+                slidesToShow: 5,
+              },
+            },
+            {
+              breakpoint: 980,
+              settings: {
+                slidesToShow: 4,
+              },
+            },
+            {
+              breakpoint: 769,
+              settings: {
+                slidesToShow: 3,
+              },
+            },
+            {
+              breakpoint: 662,
+              settings: {
+                slidesToShow: 2,
+              },
+            },
+            {
+              breakpoint: 521,
+              settings: {
+                slidesToShow: 1,
+              },
+            },
+          ],
+        });
+
+        toastr.options = {
+          debug: false,
+          newestOnTop: false,
+          progressBar: true,
+          positionClass: "toast-top-right",
+          preventDuplicates: false,
+          onclick: null,
+          showDuration: "300",
+          hideDuration: "1000",
+          timeOut: "5000",
+          extendedTimeOut: "1000",
+          showEasing: "swing",
+          hideEasing: "linear",
+          showMethod: "fadeIn",
+          hideMethod: "fadeOut",
+          // "rtl": isEnableRtl,
+          closeButton: true,
+        };
+        if ("") {
+          toastr.success("", "Success");
+        }
+        if ("") {
+          toastr.error("", "Error");
+        }
+        if ("") {
+          toastr.info("", "Info");
+        }
+        if ("") {
+          toastr.warning("", "Warning");
+        }
+
+        function reveal() {
+          var reveals = document.querySelectorAll(".anim");
+          for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            console.log("innerHeight = " + windowHeight);
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 15;
+            if (elementTop < windowHeight - elementVisible) {
+              //   alert();
+              reveals[i].classList.remove("paused");
+              reveals[i].classList.add("play");
+            } else {
+              reveals[i].classList.remove("play");
+              reveals[i].classList.add("paused");
+            }
+          }
+        }
+        window.addEventListener("scroll", reveal);
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(".client-theme").owlCarousel({
+          loop: true,
+          margin: 20,
+          nav: true,
+          autoplay: true,
+          autoplayTimeout: 1000,
+          autoplayHoverPause: true,
+          dots: true,
+          responsive: {
+            0: { items: 2 },
+            600: { items: 4 },
+            1000: { items: 6 },
+          },
+        });
+        $(".tech-theme").owlCarousel({
+          loop: true,
+          margin: 20,
+          nav: true,
+          autoplay: true,
+          autoplayTimeout: 1000,
+          autoplayHoverPause: true,
+          dots: true,
+          responsive: {
+            0: { items: 3 },
+            600: { items: 6 },
+            1000: { items: 9 },
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
