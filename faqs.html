@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <meta
-    http-equiv="content-type"
-    content="text/html;charset=UTF-8"
-  />
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <head>
     <title>Xyntek</title>
     <meta charset="utf-8" />
@@ -24,6 +21,15 @@
       rel="stylesheet"
       type="text/css"
       href="assets/fontawesome/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
     <link rel="stylesheet" type="text/css" href="assets/custom/animation.css" />
     <link
@@ -54,15 +60,11 @@
     <!-- Toaster -->
     <link rel="stylesheet" href="assets/plugins/toastr/toastr.min.css" />
     <style>
-      .accordion-button:not(.collapsed) {
-        background-color: #c7f2a7;
+      * {
+        scroll-behavior: smooth;
       }
-      .accordion-button::after {
-        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%235bbd13'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
-      }
-      .innovating {
-        padding: 0 !important;
-        font-size: 60px;
+      .navbar-toggler:focus {
+        box-shadow: 0 0 0 0.05rem !important;
       }
     </style>
     <style>
@@ -72,396 +74,392 @@
       .navbar-toggler:focus {
         box-shadow: 0 0 0 0.05rem !important;
       }
+
+      .navbar-nav .nav-link i {
+        margin-right: 0.6rem;
+        color: #ffffff;
+        width: 20px;
+        text-align: center;
+      }
+      .sidebar-header {
+        display: none;
+      }
+      @media (max-width: 991.98px) {
+        .sidebar-header {
+          display: flex;
+          align-items: center;
+          padding: 0.8rem 1rem;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .sidebar-header .sidebar-logo {
+          max-width: 160px;
+          height: auto;
+        }
+      }
+
+      @media (max-width: 991.98px) {
+        .navbar {
+          position: relative;
+          z-index: 1060;
+        }
+        .navbar-collapse {
+          position: fixed;
+          top: 0;
+          left: -300px;
+          height: 100vh;
+          width: 240px;
+          max-width: 80%;
+          background: #000;
+          padding-top: 14px;
+          overflow-y: auto;
+          transition: left 0.28s ease-in-out;
+          box-shadow: 2px 0 8px rgba(0, 0, 0, 0.25);
+        }
+        .navbar-collapse.show {
+          left: 0;
+        }
+        .navbar-nav {
+          text-align: left !important;
+          padding-left: 0;
+          margin-left: 0 !important;
+        }
+        .navbar-nav .nav-item {
+          display: block;
+        }
+        .navbar-nav .nav-link {
+          color: #ffffff !important;
+          padding: 0.9rem 1rem;
+          font-size: 1.05rem;
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+          border-radius: 6px;
+          text-align: left !important;
+        }
+        .navbar-nav .nav-link:hover {
+          background: rgba(255, 255, 255, 0.06);
+          color: #fff !important;
+        }
+        #navOverlay {
+          position: fixed;
+          inset: 0;
+          background: rgba(0, 0, 0, 0.45);
+          z-index: 1040;
+          display: none;
+        }
+      }
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow">
-      <div class="container-fluid">
-        <a class="navbar-brand p-0" href="index.html">
-          <img class="nav-img" alt="no image" src="assets/img/Company_Logo.jpg"
-        /></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i class="fa-solid fa-bars-staggered" style="color: #cccccc"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about-us.html">About Us</a>
-            </li>
-            <!-- <li class="nav-item">
-                    <a class="nav-link " href="portfolio.html">Portfolio</a>
-                </li> -->
-            <li class="nav-item">
-              <a class="nav-link" href="services.html">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="faqs.html">FAQ's</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact-us.html">Contact Us</a>
-            </li>
-          </ul>
-        </div>
+    <div class="slider-area">
+      <img
+        src="assets/img/faq-banner.jpg"
+        alt="About Us Banner"
+        style="width: 100%; height: 100vh; object-fit: cover"
+      />
+      <div class="bg-overlay"></div>
+      <div class="slide-item-inner">
+        <h6><i class="fas fa-question-circle"></i> Faqs Section</h6>
+        <h1>Have Questions? <br />We’ve Got Answers</h1>
       </div>
-    </nav>
-    <!-- <-------------Navbar End----------->
-    <div
-      class="d-flex align-items-center justify-content-center my-bg text-center"
-      style="height: 400px"
-    >
-      <div class="innovating text-white my-font scale">FAQ's</div>
-      <ul class="circles">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>
 
-    <div class="container mt-5 mb-5">
-      <div class="row faq faq-animate anim paused">
-        <div class="col-12 col-sm-12 col-md-12">
-          <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                <button
-                  class="accordion-button"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseOne"
-                  aria-expanded="true"
-                  aria-controls="collapseOne"
-                >
-                  1. Can Xyntek cover end-to-end software delivery?
-                </button>
-              </h2>
-              <div
-                id="collapseOne"
-                class="accordion-collapse collapse show"
-                aria-labelledby="headingOne"
-                data-bs-parent="#accordionExample"
-              >
-                <div class="accordion-body">
-                  It is shown by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwo">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseTwo"
-                  aria-expanded="false"
-                  aria-controls="collapseTwo"
-                >
-                  2. What technology Xyntek use for website development?
-                </button>
-              </h2>
-              <div
-                id="collapseTwo"
-                class="accordion-collapse collapse"
-                aria-labelledby="headingTwo"
-                data-bs-parent="#accordionExample"
-              >
-                <div class="accordion-body">
-                  It is hidden by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingThree">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseThree"
-                  aria-expanded="false"
-                  aria-controls="collapseThree"
-                >
-                  3. Do your employ certified specialists?
-                </button>
-              </h2>
-              <div
-                id="collapseThree"
-                class="accordion-collapse collapse"
-                aria-labelledby="headingThree"
-                data-bs-parent="#accordionExample"
-              >
-                <div class="accordion-body">
-                  It is hidden by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFour">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseFour"
-                  aria-expanded="false"
-                  aria-controls="collapseFour"
-                >
-                  4. How long does it take to build a website?
-                </button>
-              </h2>
-              <div
-                id="collapseFour"
-                class="accordion-collapse collapse"
-                aria-labelledby="headingFour"
-                data-bs-parent="#accordionExample"
-              >
-                <div class="accordion-body">
-                  It is hidden by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFive">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseFive"
-                  aria-expanded="false"
-                  aria-controls="collapseFive"
-                >
-                  5. How does Xyntek different from other companies?
-                </button>
-              </h2>
-              <div
-                id="collapseFive"
-                class="accordion-collapse collapse"
-                aria-labelledby="headingFive"
-                data-bs-parent="#accordionExample"
-              >
-                <div class="accordion-body">
-                  It is hidden by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFive">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseSix"
-                  aria-expanded="false"
-                  aria-controls="collapseFive"
-                >
-                  6. How many types of web apps do you develop?
-                </button>
-              </h2>
-              <div
-                id="collapseFive"
-                class="accordion-collapse collapse"
-                aria-labelledby="headingSix"
-                data-bs-parent="#accordionExample"
-              >
-                <div class="accordion-body">
-                  It is hidden by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFive">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseSeven"
-                  aria-expanded="false"
-                  aria-controls="collapseFive"
-                >
-                  7. How much does a server for an app cost?
-                </button>
-              </h2>
-              <div
-                id="collapseFive"
-                class="accordion-collapse collapse"
-                aria-labelledby="headingSeven"
-                data-bs-parent="#accordionExample"
-              >
-                <div class="accordion-body">
-                  It is hidden by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFive">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseEight"
-                  aria-expanded="false"
-                  aria-controls="collapseFive"
-                >
-                  8. Do you provide web app maintenance services?
-                </button>
-              </h2>
-              <div
-                id="collapseFive"
-                class="accordion-collapse collapse"
-                aria-labelledby="headingEight"
-                data-bs-parent="#accordionExample"
-              >
-                <div class="accordion-body">
-                  It is hidden by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Footer -->
-    <footer class="footer pt-2">
-      <div class="container-fluid">
-        <div class="row p-3 pt-4">
-          <div class="col-12 col-sm-6 col-md-3 hr text-center">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand p-0" href="index.html">
             <img
-              alt="no image"
-              src="assets/img/Company_Logo.jpg"
-              class="footer-logo"
+              class="nav-img"
+              alt="Company Logo"
+              src="assets/img/Company_Logo.png"
             />
-          </div>
-          <div class="col-12 col-sm-6 col-md-3 hr">
-            <h6 class="follow mb-3">Useful Links</h6>
-            <p>
-              <a href="index.html" class="text-reset">Home</a>
-            </p>
-            <p>
-              <a href="about-us.html" class="text-reset">About Us</a>
-            </p>
-            <p>
-              <a href="faqs.html" class="text-reset">FAQ's</a>
-            </p>
-            <p>
-              <a href="contact-us.html" class="text-reset">Contact Us</a>
-            </p>
-          </div>
-          <div class="col-12 col-sm-6 col-md-3 hr">
-            <h6 class="follow mb-3">Our Services</h6>
-            <p>
-              <a href="services.html#graphic_design" class="text-reset"
-                >Graphic Design Services</a
-              >
-            </p>
-            <p>
-              <a href="services.html#mobile_app_development" class="text-reset"
-                >Mobile App Development</a
-              >
-            </p>
-            <p>
-              <a href="services.html#web_development" class="text-reset"
-                >Web Development Services</a
-              >
-            </p>
-            <p>
-              <a
-                href="services.html#search_engine_optimization"
-                class="text-reset"
-                >Search Engine Optimization (SEO)</a
-              >
-            </p>
-          </div>
-          <div class="col-12 col-sm-6 col-md-3">
-            <h6 class="follow">Follow Us</h6>
-            <ul>
-              <li>
-                <a href="#" class="social text-reset">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" class="social text-reset">
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#" class="social text-reset">
-                  <i class="fab fa-google"></i>
-                </a>
-                <a href="https://www.instagram.com/xyntek.xyz?igsh=MXNobXJqczhqNXZkZA%3D%3D&utm_source=qr" class="social text-reset">
-                  <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#" class="social text-reset">
-                  <i class="fab fa-linkedin"></i>
-                </a>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+          >
+            <i class="fa-solid fa-bars-staggered" style="color: white"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <div class="sidebar-header">
+              <a class="navbar-brand p-0" href="index.html">
+                <img
+                  src="assets/img/Company_Logo.png"
+                  alt="Company Logo"
+                  class="sidebar-logo"
+                />
+              </a>
+            </div>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html"
+                  ><i class="fas fa-home"></i>Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about-us.html"
+                  ><i class="fas fa-info-circle"></i>About Us</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html"
+                  ><i class="fas fa-briefcase"></i>Services</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="faqs.html"
+                  ><i class="fas fa-question-circle"></i>FAQ's</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact-us.html"
+                  ><i class="fas fa-envelope"></i>Contact Us</a
+                >
               </li>
             </ul>
           </div>
         </div>
-        <hr />
-        <div class="row pb-2">
-          <div class="col-12 col-sm-12 col-md-12">
-            <h6 class="pt-2 text-muted copy-right text-center">
+      </nav>
+    </div>
+
+    <!-- FAQ SECTION -->
+    <section class="container my-5">
+      <div class="text-center mb-4">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+        <p class="faq-subtitle">
+          Find quick answers to the most common questions our clients ask.
+        </p>
+      </div>
+
+      <div class="faq-wrapper p-4">
+        <div class="accordion" id="accordionExample">
+          <!-- FAQ 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                1. Can Xyntek cover end-to-end software delivery?
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingOne"
+            >
+              <div class="accordion-body">
+                Yes, Xyntek provides complete end-to-end software delivery from
+                planning to deployment, ensuring a smooth, scalable and
+                successful project.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                2. What technologies does Xyntek use for web development?
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+            >
+              <div class="accordion-body">
+                We use modern technologies like React, Node.js, Next.js, PHP,
+                Laravel, MySQL, and cloud platforms for secure and
+                high-performance development.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                3. Do you employ certified specialists?
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingThree"
+            >
+              <div class="accordion-body">
+                Yes, our team includes certified developers, designers, and
+                project managers.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFour"
+                aria-expanded="false"
+                aria-controls="collapseFour"
+              >
+                4. How long does it take to build a website?
+              </button>
+            </h2>
+            <div
+              id="collapseFour"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFour"
+            >
+              <div class="accordion-body">
+                A standard website takes 2–6 weeks depending on complexity and
+                custom requirements.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFive"
+                aria-expanded="false"
+                aria-controls="collapseFive"
+              >
+                5. How is Xyntek different from other companies?
+              </button>
+            </h2>
+            <div
+              id="collapseFive"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFive"
+            >
+              <div class="accordion-body">
+                We offer personalized support, modern technology solutions,
+                transparent pricing, and long-term maintenance support.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact-cta container my-5 p-4 text-center">
+      <h3>Still Have Questions?</h3>
+      <p>
+        Our team is ready to guide you. Contact us anytime for support or custom
+        inquiries.
+      </p>
+      <a href="contact-us.html" class="btn btn-primary px-4 py-2 mt-2"
+        >Contact Us</a
+      >
+    </section>
+    <!-- Footer -->
+
+    <footer class="footer pt-5 bg-dark text-white">
+      <div class="container">
+        <div class="row pb-4">
+          <div class="col-12 col-sm-6 col-md-3 text-center mb-4 mb-md-0">
+            <img
+              src="assets/img/Company_Logo.png"
+              alt="Company Logo"
+              class="footer-logo"
+            />
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-3 mb-4 mb-md-0">
+            <h6 class="follow mb-3">Useful Links</h6>
+            <ul class="footer-links list-unstyled">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about-us.html">About Us</a></li>
+              <li><a href="faqs.html">FAQ's</a></li>
+              <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-3 mb-4 mb-md-0">
+            <h6 class="follow mb-3">Our Services</h6>
+            <ul class="footer-links list-unstyled">
+              <li>
+                <a href="services.html#graphic_design"
+                  >Graphic Design Services</a
+                >
+              </li>
+              <li>
+                <a href="services.html#mobile_app_development"
+                  >Mobile App Development</a
+                >
+              </li>
+              <li>
+                <a href="services.html#web_development"
+                  >Web Development Services</a
+                >
+              </li>
+              <li>
+                <a href="services.html#search_engine_optimization"
+                  >SEO Services</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-3">
+            <h6 class="follow mb-3">Follow Us</h6>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="#" class="social-icon bg-primary"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon bg-info"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="social-icon bg-danger"
+                ><i class="fab fa-google"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/xyntek.xyz"
+                class="social-icon bg-pink"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social-icon bg-primary"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-light" />
+
+        <div class="row">
+          <div class="col-12 text-center pb-3">
+            <p class="mb-0 text-white">
               Xyntek © 2023 — Building the Future of Technology
-            </h6>
+            </p>
           </div>
         </div>
       </div>
     </footer>
-
     <!-- Footer -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
@@ -576,5 +574,4 @@
       });
     </script>
   </body>
-
 </html>

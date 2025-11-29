@@ -19,6 +19,15 @@
     />
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
       type="text/css"
       href="assets/fontawesome/css/fontawesome.min.css"
     />
@@ -71,338 +80,365 @@
         box-shadow: 0 0 0 0.05rem !important;
       }
     </style>
+    <style>
+      * {
+        scroll-behavior: smooth;
+      }
+      .navbar-toggler:focus {
+        box-shadow: 0 0 0 0.05rem !important;
+      }
+
+      .navbar-nav .nav-link i {
+        margin-right: 0.6rem;
+        color: #ffffff;
+        width: 20px;
+        text-align: center;
+      }
+      .sidebar-header {
+        display: none;
+      }
+      @media (max-width: 991.98px) {
+        .sidebar-header {
+          display: flex;
+          align-items: center;
+          padding: 0.8rem 1rem;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .sidebar-header .sidebar-logo {
+          max-width: 160px;
+          height: auto;
+        }
+      }
+
+      @media (max-width: 991.98px) {
+        .navbar {
+          position: relative;
+          z-index: 1060;
+        }
+        .navbar-collapse {
+          position: fixed;
+          top: 0;
+          left: -300px;
+          height: 100vh;
+          width: 240px;
+          max-width: 80%;
+          background: #000;
+          padding-top: 14px;
+          overflow-y: auto;
+          transition: left 0.28s ease-in-out;
+          box-shadow: 2px 0 8px rgba(0, 0, 0, 0.25);
+        }
+        .navbar-collapse.show {
+          left: 0;
+        }
+        .navbar-nav {
+          text-align: left !important;
+          padding-left: 0;
+          margin-left: 0 !important;
+        }
+        .navbar-nav .nav-item {
+          display: block;
+        }
+        .navbar-nav .nav-link {
+          color: #ffffff !important;
+          padding: 0.9rem 1rem;
+          font-size: 1.05rem;
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+          border-radius: 6px;
+          text-align: left !important; 
+        }
+        .navbar-nav .nav-link:hover {
+          background: rgba(255, 255, 255, 0.06);
+          color: #fff !important;
+        }
+        #navOverlay {
+          position: fixed;
+          inset: 0;
+          background: rgba(0, 0, 0, 0.45);
+          z-index: 1040;
+          display: none;
+        }
+      }
+    </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow">
-      <div class="container-fluid">
-        <a class="navbar-brand p-0" href="index.html">
-          <img class="nav-img" alt="no image" src="assets/img/Company_Logo.jpg"
-        /></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i class="fa-solid fa-bars-staggered" style="color: #cccccc"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
-            <li class="nav-item">
-              <a class="nav-link " href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about-us.html">About Us</a>
-            </li>
-            <!-- <li class="nav-item">
-                    <a class="nav-link " href="portfolio.html">Portfolio</a>
-                </li> -->
-            <li class="nav-item">
-              <a class="nav-link active" href="services.html">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="faqs.html">FAQ's</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact-us.html">Contact Us</a>
-            </li>
-          </ul>
-        </div>
+    <div class="slider-area">
+      <img
+        src="assets/img/services-banner.jpg"
+        alt="About Us Banner"
+        style="width: 100%; height: 100vh; object-fit: cover"
+      />
+      <div class="bg-overlay"></div>
+      <div class="slide-item-inner">
+        <h6><i class="fas fa-briefcase"></i> Our Services</h6>
+        <h1>End-to-End Tech <br />Services for Your Growth</h1>
       </div>
-    </nav>
-    <!-- <-------------Navbar End----------->
-    <div
-      class="d-flex align-items-center justify-content-center my-bg mb-5 text-center"
-      style="height: 400px"
-    >
-      <div class="innovating text-white my-font scale">Services</div>
-      <ul class="circles">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>
 
-    <div class="container mb-5">
-      <div class="row">
-        <div
-          class="col-12 col-sm-6 col-md-6 col-lg-4 mb-5"
-          id="web_development"
-        >
-          <div
-            class="card contact-card hvr-float-shadow h-100 scale anim paused"
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand p-0" href="index.html">
+            <img
+              class="nav-img"
+              alt="Company Logo"
+              src="assets/img/Company_Logo.png"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
           >
-            <img
-              src="assets/img/services/service.jpg"
-              class="card-img-top"
-              height="220px"
-              alt="no Image"
-              style="
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
-              "
-            />
-            <div class="card-body">
-              <h5 class="card-title">Web Development</h5>
-              <p class="card-text text-center">
-                Web development services use to design, build and support all
-                types of web-based software. The work is typically very
-                project-focused and involves collaborating with a team that
-                helps to coordinate the client’s needs into the end product.
-              </p>
+            <i class="fa-solid fa-bars-staggered" style="color: white"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <div class="sidebar-header">
+              <a class="navbar-brand p-0" href="index.html">
+                <img
+                  src="assets/img/Company_Logo.png"
+                  alt="Company Logo"
+                  class="sidebar-logo"
+                />
+              </a>
             </div>
-          </div>
-        </div>
-        <div
-          class="col-12 col-sm-6 col-md-6 col-lg-4 mb-5"
-          id="mobile_app_development"
-        >
-          <div
-            class="card contact-card hvr-float-shadow h-100 scale anim paused"
-          >
-            <img
-              src="assets/img/services/Mobile_App_Development.jpg"
-              class="card-img-top"
-              height="220px"
-              alt="no Image"
-              style="
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
-              "
-            />
-            <div class="card-body text-center">
-              <h5 class="card-title">Mobile App Development</h5>
-              <p class="card-text">
-                Mobile application development is a service of making software
-                for smartphones digital assistants creates flawless applications
-                for mobile platforms like android and windows. The software can
-                be preinstalled on the device, downloaded from a mobile app
-                store, or accessed through a mobile web browser.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-5" id="graphic_design">
-          <div
-            class="card contact-card hvr-float-shadow h-100 scale anim paused"
-          >
-            <img
-              src="assets/img/services/Graphic_Design.jpg"
-              class="card-img-top"
-              height="220px"
-              alt="no Image"
-              style="
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
-              "
-            />
-            <div class="card-body text-center">
-              <h5 class="card-title">UI/UX Services</h5>
-              <p class="card-text">
-                Professionals create here visuals, typography, and pictures to
-                meet user-specific needs and focus on the logic of displaying
-                elements in interactive designs to optimize the user experience.
-                It focuses on branding, typography, layout, and all principles
-                of design composition.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div
-          class="col-12 col-sm-6 col-md-6 col-lg-4 mb-5"
-          id="microsoft_office"
-        >
-          <div
-            class="card contact-card hvr-float-shadow h-100 scale anim paused"
-          >
-            <img
-              src="assets/img/services/MS_Office.jpg"
-              class="card-img-top"
-              height="220px"
-              alt="no Image"
-              style="
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
-              "
-            />
-            <div class="card-body text-center">
-              <h5 class="card-title">AI & Automation </h5>
-              <p class="card-text">
-                Microsoft office is a service designed to help productivity and
-                complete tasks on a computer. It is the most commonly used word
-                processor software. Microsoft Office is a collection of
-                applications that have unique purposes and requirements. You can
-                create and edit documents containing text and images.
-            </div>
-          </div>
-        </div>
-        <div
-          class="col-12 col-sm-6 col-md-6 col-lg-4 mb-5"
-          id="search_engine_optimization"
-        >
-          <div
-            class="card contact-card hvr-float-shadow h-100 scale anim paused"
-          >
-            <img
-              src="assets/img/services/SEO.jpg"
-              class="card-img-top"
-              height="220px"
-              alt="no Image"
-              style="
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
-              "
-            />
-            <div class="card-body text-center">
-              <h5 class="card-title">Search Engine Optimization (SEO)</h5>
-              <p class="card-text">
-                It describes a series of techniques to improve the visibility of
-                a website on search engine result pages. Optimization aims to
-                rank as highly as possible for a search query. It is a service
-                of making a website more visible on a search engine's results
-                page. 
-              </p>
-            </div>
-          </div>
-        </div>
-        <div
-          class="col-12 col-sm-6 col-md-6 col-lg-4 mb-5"
-          id="digital_marketing"
-        >
-          <div
-            class="card contact-card hvr-float-shadow h-100 scale anim paused"
-          >
-            <img
-              src="assets/img/services/digital.jpg"
-              class="card-img-top"
-              height="220px"
-              alt="no Image"
-              style="
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
-              "
-            />
-            <div class="card-body text-center">
-              <h5 class="card-title">Digital Marketing</h5>
-              <p class="card-text">
-                It describes a series of techniques to improve the visibility of
-                a website on search engine result pages. Optimization aims to
-                rank as highly as possible for a search query. It is a service
-                of making a website more visible on a search engine's results
-                page.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Footer -->
-    <footer class="footer pt-2">
-      <div class="container-fluid">
-        <div class="row p-3 pt-4">
-          <div class="col-12 col-sm-6 col-md-3 hr text-center">
-            <img
-              alt="no image"
-              src="assets/img/Company_Logo.jpg"
-              class="footer-logo"
-            />
-          </div>
-          <div class="col-12 col-sm-6 col-md-3 hr">
-            <h6 class="follow mb-3">Useful Links</h6>
-            <p>
-              <a href="index.html" class="text-reset">Home</a>
-            </p>
-            <p>
-              <a href="about-us.html" class="text-reset">About Us</a>
-            </p>
-            <p>
-              <a href="faqs.html" class="text-reset">FAQ's</a>
-            </p>
-            <p>
-              <a href="contact-us.html" class="text-reset">Contact Us</a>
-            </p>
-          </div>
-          <div class="col-12 col-sm-6 col-md-3 hr">
-            <h6 class="follow mb-3">Our Services</h6>
-            <p>
-              <a href="services.html#graphic_design" class="text-reset"
-                >Graphic Design Services</a
-              >
-            </p>
-            <p>
-              <a href="services.html#mobile_app_development" class="text-reset"
-                >Mobile App Development</a
-              >
-            </p>
-            <p>
-              <a href="services.html#web_development" class="text-reset"
-                >Web Development Services</a
-              >
-            </p>
-            <p>
-              <a
-                href="services.html#search_engine_optimization"
-                class="text-reset"
-                >Search Engine Optimization (SEO)</a
-              >
-            </p>
-          </div>
-          <div class="col-12 col-sm-6 col-md-3">
-            <h6 class="follow">Follow Us</h6>
-            <ul>
-              <li>
-                <a href="#" class="social text-reset">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" class="social text-reset">
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#" class="social text-reset">
-                  <i class="fab fa-google"></i>
-                </a>
-                <a
-                  href="https://www.instagram.com/xyntek.xyz?igsh=MXNobXJqczhqNXZkZA%3D%3D&utm_source=qr "
-                  class="social text-reset"
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html"
+                  ><i class="fas fa-home"></i>Home</a
                 >
-                  <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#" class="social text-reset">
-                  <i class="fab fa-linkedin"></i>
-                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about-us.html"
+                  ><i class="fas fa-info-circle"></i>About Us</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="services.html"
+                  ><i class="fas fa-briefcase"></i>Services</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="faqs.html"
+                  ><i class="fas fa-question-circle"></i>FAQ's</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact-us.html"
+                  ><i class="fas fa-envelope"></i>Contact Us</a
+                >
               </li>
             </ul>
           </div>
         </div>
-        <hr />
-        <div class="row pb-2">
-          <div class="col-12 col-sm-12 col-md-12">
-            <h6 class="pt-2 text-muted copy-right text-center">
+      </nav>
+    </div>
+
+    <!-- SERVICES SECTION -->
+    <section class="container py-5">
+      <div class="text-center mb-5">
+        <h2 class="service-heading">What We Deliver</h2>
+        <p class="service-subtitle">
+          High-quality digital solutions crafted with innovation, reliability,
+          and performance. We help brands grow through technology.
+        </p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-5">
+          <div class="card contact-card service-card h-100">
+            <img
+              src="assets/img/services/service.jpg"
+              class="card-img-top"
+              height="220"
+              alt="Web Development"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Web Development</h5>
+              <p class="card-text">
+                We design, develop & maintain modern, high-performance websites
+                tailored to your business goals.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-5">
+          <div class="card contact-card service-card h-100">
+            <img
+              src="assets/img/services/Mobile_App_Development.jpg"
+              class="card-img-top"
+              height="220"
+              alt="Mobile App Development"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Mobile App Development</h5>
+              <p class="card-text">
+                We build seamless Android, iOS & cross-platform apps that
+                deliver powerful mobile experiences.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-5">
+          <div class="card contact-card service-card h-100">
+            <img
+              src="assets/img/services/Graphic_Design.jpg"
+              class="card-img-top"
+              height="220"
+              alt="UI UX Services"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">UI/UX Services</h5>
+              <p class="card-text">
+                Beautiful, user-friendly interfaces crafted to enhance
+                engagement and elevate customer experience.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-5">
+          <div class="card contact-card service-card h-100">
+            <img
+              src="assets/img/services/MS_Office.jpg"
+              class="card-img-top"
+              height="220"
+              alt="AI Automation"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">AI & Automation</h5>
+              <p class="card-text">
+                Smart automation and AI-powered solutions that increase
+                efficiency and accelerate your business.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-5">
+          <div class="card contact-card service-card h-100">
+            <img
+              src="assets/img/services/SEO.jpg"
+              class="card-img-top"
+              height="220"
+              alt="SEO"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Search Engine Optimization</h5>
+              <p class="card-text">
+                Boost your online visibility with our powerful, data-driven SEO
+                strategies.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-5">
+          <div class="card contact-card service-card h-100">
+            <img
+              src="assets/img/services/digital.jpg"
+              class="card-img-top"
+              height="220"
+              alt="Digital Marketing"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Digital Marketing</h5>
+              <p class="card-text">
+                Results-driven digital marketing services that help your brand
+                reach the right audience.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="footer pt-5 bg-dark text-white">
+      <div class="container">
+        <div class="row pb-4">
+          <div class="col-12 col-sm-6 col-md-3 text-center mb-4 mb-md-0">
+            <img
+              src="assets/img/Company_Logo.png"
+              alt="Company Logo"
+              class="footer-logo"
+            />
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-3 mb-4 mb-md-0">
+            <h6 class="follow mb-3">Useful Links</h6>
+            <ul class="footer-links list-unstyled">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about-us.html">About Us</a></li>
+              <li><a href="faqs.html">FAQ's</a></li>
+              <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-3 mb-4 mb-md-0">
+            <h6 class="follow mb-3">Our Services</h6>
+            <ul class="footer-links list-unstyled">
+              <li>
+                <a href="services.html#graphic_design"
+                  >Graphic Design Services</a
+                >
+              </li>
+              <li>
+                <a href="services.html#mobile_app_development"
+                  >Mobile App Development</a
+                >
+              </li>
+              <li>
+                <a href="services.html#web_development"
+                  >Web Development Services</a
+                >
+              </li>
+              <li>
+                <a href="services.html#search_engine_optimization"
+                  >SEO Services</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-3">
+            <h6 class="follow mb-3">Follow Us</h6>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="#" class="social-icon bg-primary"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon bg-info"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="social-icon bg-danger"
+                ><i class="fab fa-google"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/xyntek.xyz"
+                class="social-icon bg-pink"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social-icon bg-primary"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-light" />
+
+        <div class="row">
+          <div class="col-12 text-center pb-3">
+            <p class="mb-0 text-white">
               Xyntek © 2023 — Building the Future of Technology
-            </h6>
+            </p>
           </div>
         </div>
       </div>
     </footer>
-
     <!-- Footer -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
@@ -418,17 +454,6 @@
     <script src="assets/plugins/toastr/toastr.min.js"></script>
 
     <script>
-      // navabr toogler change
-      // sh = document.getElementById("navbarSupportedContent");
-      // if(sh.classList.contains("show")) {
-      //     alert();
-      // } else {
-      //     cosnole.log("no");
-      // }
-
-      // animation start
-
-      // carousal start
       $(document).ready(function () {
         $(".tech").slick({
           slidesToShow: 6,

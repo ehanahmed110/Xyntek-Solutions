@@ -30,6 +30,15 @@
     />
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
       integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
       crossorigin="anonymous"
@@ -63,87 +72,160 @@
       .navbar-toggler:focus {
         box-shadow: 0 0 0 0.05rem !important;
       }
+
+      .navbar-nav .nav-link i {
+        margin-right: 0.6rem;
+        color: #ffffff;
+        width: 20px;
+        text-align: center;
+      }
+      .sidebar-header {
+        display: none;
+      }
+      @media (max-width: 991.98px) {
+        .sidebar-header {
+          display: flex;
+          align-items: center;
+          padding: 0.8rem 1rem;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .sidebar-header .sidebar-logo {
+          max-width: 160px;
+          height: auto;
+        }
+      }
+
+      @media (max-width: 991.98px) {
+        .navbar {
+          position: relative;
+          z-index: 1060;
+        }
+        .navbar-collapse {
+          position: fixed;
+          top: 0;
+          left: -300px;
+          height: 100vh;
+          width: 240px;
+          max-width: 80%;
+          background: #000;
+          padding-top: 14px;
+          overflow-y: auto;
+          transition: left 0.28s ease-in-out;
+          box-shadow: 2px 0 8px rgba(0, 0, 0, 0.25);
+        }
+        .navbar-collapse.show {
+          left: 0;
+        }
+        .navbar-nav {
+          text-align: left !important;
+          padding-left: 0;
+          margin-left: 0 !important;
+        }
+        .navbar-nav .nav-item {
+          display: block;
+        }
+        .navbar-nav .nav-link {
+          color: #ffffff !important;
+          padding: 0.9rem 1rem;
+          font-size: 1.05rem;
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+          border-radius: 6px;
+          text-align: left !important;
+        }
+        .navbar-nav .nav-link:hover {
+          background: rgba(255, 255, 255, 0.06);
+          color: #fff !important;
+        }
+        #navOverlay {
+          position: fixed;
+          inset: 0;
+          background: rgba(0, 0, 0, 0.45);
+          z-index: 1040;
+          display: none;
+        }
+      }
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow">
-      <div class="container-fluid">
-        <a class="navbar-brand p-0" href="index.html">
-          <img class="nav-img" alt="no image" src="assets/img/Company_Logo.jpg"
-        /></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i class="fa-solid fa-bars-staggered" style="color: #cccccc"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about-us.html">About Us</a>
-            </li>
-            <!-- <li class="nav-item">
-                    <a class="nav-link " href="portfolio.html">Portfolio</a>
-                </li> -->
-            <li class="nav-item">
-              <a class="nav-link" href="services.html">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="faqs.html">FAQ's</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact-us.html">Contact Us</a>
-            </li>
-          </ul>
-        </div>
+    <div class="slider-area">
+      <video autoplay muted loop id="myVideo">
+        <source src="assets/media/tech_banner.mp4.mp4" type="video/mp4" />
+      </video>
+      <div class="bg-overlay"></div>
+      <div class="slide-item-inner">
+        <h6><i class="fas fa-home"></i> Great Experience In Technology</h6>
+        <h1>We Turn Ideas Into <br />Powerful Digital Products</h1>
       </div>
-    </nav>
-    <!-- <-------------Navbar End----------->
 
-    <!-- -------------------detail---------------- -->
-    <div
-      class="d-flex align-items-center justify-content-center my-bg text-center"
-      style="height: 400px"
-    >
-      <div class="text-white my-font innovating scale">
-        Innovating Your Business
-      </div>
-      <ul class="circles">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand p-0" href="index.html">
+            <img
+              class="nav-img"
+              alt="Company Logo"
+              src="assets/img/Company_Logo.png"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+          >
+            <i class="fa-solid fa-bars-staggered" style="color: white"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <div class="sidebar-header">
+              <a class="navbar-brand p-0" href="index.html">
+                <img
+                  src="assets/img/Company_Logo.png"
+                  alt="Company Logo"
+                  class="sidebar-logo"
+                />
+              </a>
+            </div>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html"
+                  ><i class="fas fa-home"></i>Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about-us.html"
+                  ><i class="fas fa-info-circle"></i>About Us</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html"
+                  ><i class="fas fa-briefcase"></i>Services</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="faqs.html"
+                  ><i class="fas fa-question-circle"></i>FAQ's</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact-us.html"
+                  ><i class="fas fa-envelope"></i>Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </div>
-    <!-- -------------------detail End---------------- -->
 
     <!-- -----------------Counter------------------- -->
-    <div class="container-fluid mb-5 coun">
+    <div class="container-fluid count mt-5">
       <div class="row uper-box slide-right">
+        <h2
+          class="key scale anim paused text-black text-center mb-5 display-5"
+          style="font-weight: 600"
+        >
+          Our Milestones
+        </h2>
         <div
           class="col-12 col-sm-6 col-md-3 col-lg-3 d-flex justify-content-center mb-4"
         >
@@ -234,12 +316,17 @@
     <!-- -----------------Counter End------------------- -->
 
     <!-- ------------------Goal-------------------- -->
-    <div class="container-fluid mb-5" style="margin-top: 5rem">
+    <div class="container-fluid mb-5" style="margin-top: 3rem">
       <div class="row">
         <div
           class="col-12 col-sm-12 col-md-12 col-lg-12 px-0 text-center slide-right slide-right-duration anim paused"
         >
-          <h1 class="key scale anim paused text-black">Our Key Features</h1>
+          <h1
+            class="key scale anim paused text-black display-5"
+            style="font-weight: 600"
+          >
+            Our Key Features
+          </h1>
         </div>
       </div>
 
@@ -328,139 +415,6 @@
         </div>
       </div>
     </div>
-    <!-- ------------------Goal-------------------- -->
-
-    <!-- -----------------Services------------------ -->
-    <!-- <div class="container-fluid mb-5" style="margin-top: 8rem">
-      <div class="row">
-        <div
-          class="col-12 col-sm-12 col-md-12 col-lg-12 px-0 py-3 text-center slide-right slide-right-duration anim paused"
-          style="background-color: #0ba5b7"
-        >
-          <h1 class="key-service scale anim paused">Services We Provide</h1>
-        </div>
-      </div>
-      <div class="row mtkey-6 justify-content-center">
-        <div
-          class="col-12 col-sm-8 col-md-6 col-lg-4 mt-5 mb-5 service-animate anim paused"
-        >
-          <div class="card card-service mx-auto">
-            <img
-              alt="no image"
-              src="assets/img/services/service1.png"
-              class="card-img-top mx-auto service-img1"
-            />
-            <div class="card-body text-center">
-              <h1 class="service-font1">Web App</h1>
-              <p class="card-text"></p>
-            </div>
-          </div>
-        </div>
-        <div
-          class="col-12 col-sm-8 col-md-6 col-lg-4 mt-5 mb-5 service-animate2 anim paused"
-        >
-          <div class="card card-service mx-auto service-top">
-            <img
-              alt="no image"
-              src="assets/img/services/digital.png"
-              class="card-img-top mx-auto service-img-d"
-            />
-            <div class="card-body text-center">
-              <h1 class="service-font-d">Digital Marketing</h1>
-              <p class="card-text"></p>
-            </div>
-          </div>
-        </div>
-        <div
-          class="col-12 col-sm-8 col-md-6 col-lg-4 mt-5 mb-5 service-animate anim paused"
-        >
-          <div class="card card-service mx-auto">
-            <img
-              alt="no image"
-              src="assets/img/services/service3.png"
-              class="card-img-top mx-auto service-img3"
-            />
-            <div class="card-body text-center">
-              <h1 class="service-font">Mobile App</h1>
-              <p class="card-text"></p>
-            </div>
-          </div>
-        </div>
-        <div
-          class="col-12 col-sm-8 col-md-6 col-lg-4 mt-5 mb-5 service-animate anim paused"
-        >
-          <div class="card card-service mx-auto">
-            <img
-              alt="no image"
-              src="assets/img/services/service4.png"
-              class="card-img-top mx-auto service-img4"
-            />
-            <div class="card-body text-center">
-              <h1 class="service-font2">Graphic Design</h1>
-              <p class="card-text"></p>
-            </div>
-          </div>
-        </div>
-        <div
-          class="col-12 col-sm-8 col-md-6 col-lg-4 mt-5 mb-5 service-animate2 anim paused"
-        >
-          <div class="card card-service mx-auto service-top">
-            <img
-              alt="no image"
-              src="assets/img/services/service5.png"
-              class="card-img-top mx-auto service-img2"
-            />
-            <div class="card-body text-center">
-              <h1 class="service-font2">Microsoft Office</h1>
-              <p class="card-text"></p>
-            </div>
-          </div>
-        </div>
-        <div
-          class="col-12 col-sm-8 col-md-6 col-lg-4 mt-5 mb-5 service-animate anim paused"
-        >
-          <div class="card card-service mx-auto">
-            <img
-              alt="no image"
-              src="assets/img/services/service6.png"
-              class="card-img-top mx-auto service-img6"
-            />
-            <div class="card-body text-center">
-              <h1 class="service-font3">SEO</h1>
-              <p class="card-text"></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-sm-12 col-md-6 col-lg-4 mt-5 mb-5">
-                <div class="card card-service mx-auto">
-                    <img src="assets/img/services/Graphic_Design.jpg" class="card-img-top mx-auto service-img4">
-                    <div class="card-body text-center">
-                        <h1 class="service-font2">Graphic Design</h1>
-                        <p class="card-text"></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-4 mt-5 mb-5">
-                <div class="card card-service mx-auto service-top">
-                    <img src="assets/img/service5.png" class="card-img-top mx-auto service-img2">
-                    <div class="card-body text-center">
-                        <h1 class="service-font2">Microsoft Office</h1>
-                        <p class="card-text"></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-4 mt-5 mb-5">
-                <div class="card card-service mx-auto">
-                    <img src="assets/img/service6.png" class="card-img-top mx-auto service-img6">
-                    <div class="card-body text-center">
-                        <h1 class="service-font3">SEO</h1>
-                        <p class="card-text"></p>
-                    </div>
-                </div>
-            </div>
-      </div>
-    </div> -->
-    <!-- -----------------Services End------------------ -->
     <!-- -----------------Technologies------------------- -->
 
     <div class="container-fluid mb-5" style="margin-top: 4rem">
@@ -618,98 +572,93 @@
 
     <!-- -----------------------Clients End------------------------- -->
 
-    <!-- ------------------------Featured Product------------------------ -->
-
-    <!-- --------------------------Featured Product---------------------- -->
-
     <!-- Footer -->
-    <footer class="footer pt-2">
-      <div class="container-fluid">
-        <div class="row p-3 pt-4">
-          <div class="col-12 col-sm-6 col-md-3 hr text-center">
+    <footer class="footer pt-5 bg-dark text-white">
+      <div class="container">
+        <div class="row pb-4">
+          <!-- Logo -->
+          <div class="col-12 col-sm-6 col-md-3 text-center mb-4 mb-md-0">
             <img
-              alt="no image"
-              src="assets/img/Company_Logo.jpg"
+              src="assets/img/Company_Logo.png"
+              alt="Company Logo"
               class="footer-logo"
             />
           </div>
-          <div class="col-12 col-sm-6 col-md-3 hr">
+
+          <!-- Useful Links -->
+          <div class="col-12 col-sm-6 col-md-3 mb-4 mb-md-0">
             <h6 class="follow mb-3">Useful Links</h6>
-            <p>
-              <a href="index.html" class="text-reset">Home</a>
-            </p>
-            <p>
-              <a href="about-us.html" class="text-reset">About Us</a>
-            </p>
-            <p>
-              <a href="faqs.html" class="text-reset">FAQ's</a>
-            </p>
-            <p>
-              <a href="contact-us.html" class="text-reset">Contact Us</a>
-            </p>
+            <ul class="footer-links list-unstyled">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about-us.html">About Us</a></li>
+              <li><a href="faqs.html">FAQ's</a></li>
+              <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
           </div>
-          <div class="col-12 col-sm-6 col-md-3 hr">
+
+          <!-- Services -->
+          <div class="col-12 col-sm-6 col-md-3 mb-4 mb-md-0">
             <h6 class="follow mb-3">Our Services</h6>
-            <p>
-              <a href="services.html#graphic_design" class="text-reset"
-                >Graphic Design Services</a
-              >
-            </p>
-            <p>
-              <a href="services.html#mobile_app_development" class="text-reset"
-                >Mobile App Development</a
-              >
-            </p>
-            <p>
-              <a href="services.html#web_development" class="text-reset"
-                >Web Development Services</a
-              >
-            </p>
-            <p>
-              <a
-                href="services.html#search_engine_optimization"
-                class="text-reset"
-                >Search Engine Optimization (SEO)</a
-              >
-            </p>
-          </div>
-          <div class="col-12 col-sm-6 col-md-3">
-            <h6 class="follow">Follow Us</h6>
-            <ul>
+            <ul class="footer-links list-unstyled">
               <li>
-                <a href="#" class="social text-reset">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" class="social text-reset">
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#" class="social text-reset">
-                  <i class="fab fa-google"></i>
-                </a>
-                <a
-                  href="https://www.instagram.com/xyntek.xyz?igsh=MXNobXJqczhqNXZkZA%3D%3D&utm_source=qr"
-                  class="social text-reset"
+                <a href="services.html#graphic_design"
+                  >Graphic Design Services</a
                 >
-                  <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#" class="social text-reset">
-                  <i class="fab fa-linkedin"></i>
-                </a>
+              </li>
+              <li>
+                <a href="services.html#mobile_app_development"
+                  >Mobile App Development</a
+                >
+              </li>
+              <li>
+                <a href="services.html#web_development"
+                  >Web Development Services</a
+                >
+              </li>
+              <li>
+                <a href="services.html#search_engine_optimization"
+                  >SEO Services</a
+                >
               </li>
             </ul>
           </div>
+
+          <!-- Social Media -->
+          <div class="col-12 col-sm-6 col-md-3">
+            <h6 class="follow mb-3">Follow Us</h6>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="#" class="social-icon bg-primary"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon bg-info"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="social-icon bg-danger"
+                ><i class="fab fa-google"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/xyntek.xyz"
+                class="social-icon bg-pink"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social-icon bg-primary"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
         </div>
-        <hr />
-        <div class="row pb-2">
-          <div class="col-12 col-sm-12 col-md-12">
-            <h6 class="pt-2 text-muted copy-right text-center">
+
+        <hr class="border-light" />
+
+        <div class="row">
+          <div class="col-12 text-center pb-3">
+            <p class="mb-0 text-white">
               Xyntek © 2023 — Building the Future of Technology
-            </h6>
+            </p>
           </div>
         </div>
       </div>
     </footer>
-
     <!-- Footer -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
@@ -729,7 +678,17 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script>
+      const myVideo = document.getElementById("myVideo");
+      myVideo.addEventListener("ended", function () {
+        this.currentTime = 0;
+        this.play();
+      });
+    </script>
     <script>
       $(document).ready(function () {
         $(".tech").slick({
@@ -858,6 +817,30 @@
             600: { items: 6 },
             1000: { items: 9 },
           },
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        var $nav = $("#navbarContent");
+
+        $nav.on("shown.bs.collapse", function () {
+          if ($("#navOverlay").length === 0) {
+            $("body").append('<div id="navOverlay"></div>');
+          }
+          $("#navOverlay").fadeIn(180);
+          $("body").css("overflow", "hidden");
+        });
+
+        $nav.on("hidden.bs.collapse", function () {
+          $("#navOverlay").fadeOut(150, function () {
+            $(this).remove();
+          });
+          $("body").css("overflow", "");
+        });
+
+        $(document).on("click", "#navOverlay", function () {
+          $nav.collapse("hide");
         });
       });
     </script>
