@@ -301,16 +301,24 @@
           <div class="col-lg-6">
             <div class="contact-box shadow-sm p-4 h-100">
               <h2 class="text-center mb-4">Get In Touch</h2>
-              <form action="https://formsubmit.co/hafizzeshan0306@gmail.com" method="POST">
+              <form
+                action="https://formsubmit.co/hafizzeshan0306@gmail.com"
+                method="POST"
+              >
+                <input type="hidden" name="_from" value="Xyntek Contact Form" />
+
+                <input type="hidden" name="_captcha" value="false" />
+
                 <div class="mb-3">
                   <input
                     type="text"
-                    name="name"
+                    name="client_name"
                     class="form-control"
                     placeholder="Your Name"
                     required
                   />
                 </div>
+
                 <div class="mb-3">
                   <input
                     type="email"
@@ -320,6 +328,7 @@
                     required
                   />
                 </div>
+
                 <div class="mb-3">
                   <input
                     type="number"
@@ -329,6 +338,7 @@
                     required
                   />
                 </div>
+
                 <div class="mb-3">
                   <input
                     type="text"
@@ -338,6 +348,7 @@
                     required
                   />
                 </div>
+
                 <div class="mb-3">
                   <textarea
                     name="message"
@@ -347,9 +358,15 @@
                     required
                   ></textarea>
                 </div>
+
                 <div class="text-center">
-                  <button type="submit" class="btn btn-success px-4 py-2">
-                    <i class="fa fa-paper-plane me-2"></i>Send Message
+                  <button
+                    type="submit"
+                    class="btn btn-success px-4 py-2"
+                    id="btnSubmit"
+                  >
+                    <i class="fa fa-paper-plane me-2"></i>
+                    <span id="btnText">Send Message</span>
                   </button>
                 </div>
               </form>
@@ -557,6 +574,5 @@
         window.addEventListener("scroll", reveal);
       });
     </script>
-
   </body>
 </html>
